@@ -16,6 +16,7 @@ function App() {
     setLoading(true)
     const url = "https://api.breakingbadquotes.xyz/v1/quotes";
     const res = await axios(url);
+    console.log(res)
     const [newQuote] = await res.data;
 
     const { quote: quote, author } = newQuote;
